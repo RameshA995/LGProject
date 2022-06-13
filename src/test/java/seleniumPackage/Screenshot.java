@@ -23,6 +23,7 @@ public class Screenshot {
 	        //navigate to url
 	        driver.get("https://www.timeanddate.com/worldclock/india/new-delhi");
 	        driver.manage().window().maximize();
+	        System.out.println("Opened");
 	       //Take the screenshot
 	        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	        
@@ -32,6 +33,7 @@ public class Screenshot {
 	        } catch (IOException e) {
 	            System.out.println(e.getMessage());
 	        }
+	        System.out.println("screenshot takend");
 	        Thread.sleep(3000);
 	        //closing the webdriver
 	        driver.close();
